@@ -1,0 +1,17 @@
+Python 3.15.1
+
+Ex 6. tri_bulles_faux([14, 7, 18, 3, 11, 9]) :
+  IndexError: list index out of range
+
+Ex 7. recherche_dichotomique_fausse dans [3, 7, 9, 11, 14, 18] :
+  cherche 11 -> 3
+  cherche 3 -> 0
+  cherche 18 -> toujours en train de chercher apres 1000 tours (bas=4, haut=5)
+  cherche 12 -> toujours en train de chercher apres 1000 tours (bas=3, haut=3)
+  cherche 20 -> toujours en train de chercher apres 1000 tours (bas=4, haut=5)
+
+Tri rapide, pivot au hasard, sur 20 000 notes entre 0 et 20 (beaucoup de doublons) :
+  partition classique : RecursionError: maximum recursion depth exceeded
+  partition en trois (tris.tri_rapide) : triee = True
+
+t = t.sort() -> t vaut None

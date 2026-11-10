@@ -1,0 +1,51 @@
+Python 3.15.1
+
+--- tri a bulles : [14, 7, 18, 3, 11, 9]
+  passage 1 : [7, 14, 3, 11, 9, 18]
+  passage 2 : [7, 3, 11, 9, 14, 18]
+  passage 3 : [3, 7, 9, 11, 14, 18]
+  passage 4 : [3, 7, 9, 11, 14, 18]
+  resultat  : [3, 7, 9, 11, 14, 18]
+--- tri par selection : [14, 7, 18, 3, 11, 9]
+  passage 1 : [3, 7, 18, 14, 11, 9]
+  passage 2 : [3, 7, 18, 14, 11, 9]
+  passage 3 : [3, 7, 9, 14, 11, 18]
+  passage 4 : [3, 7, 9, 11, 14, 18]
+  passage 5 : [3, 7, 9, 11, 14, 18]
+  resultat  : [3, 7, 9, 11, 14, 18]
+--- tri par insertion : [14, 7, 18, 3, 11, 9]
+  passage 1 : [7, 14, 18, 3, 11, 9]
+  passage 2 : [7, 14, 18, 3, 11, 9]
+  passage 3 : [3, 7, 14, 18, 11, 9]
+  passage 4 : [3, 7, 11, 14, 18, 9]
+  passage 5 : [3, 7, 9, 11, 14, 18]
+  resultat  : [3, 7, 9, 11, 14, 18]
+--- tri fusion : [14, 7, 18, 3, 11, 9]
+  moities    : [14, 7, 18] et [3, 11, 9]
+  triees     : [7, 14, 18] et [3, 9, 11]
+  fusion     : [3, 7, 9, 11, 14, 18]
+--- tri rapide (pivot = dernier) : [14, 7, 18, 3, 11, 9] -> [3, 7, 9, 11, 14, 18]
+--- recherche dichotomique dans [3, 7, 9, 11, 14, 18]
+  11 -> indice 3 (recursif : 3)
+  10 -> indice -1
+
+=== Exercices ===
+Ex 1. Tri par insertion, liste apres chaque passage :
+--- Ex 1 : [5, 2, 9, 1, 7]
+  passage 1 : [2, 5, 9, 1, 7]
+  passage 2 : [2, 5, 9, 1, 7]
+  passage 3 : [1, 2, 5, 9, 7]
+  passage 4 : [1, 2, 5, 7, 9]
+  resultat  : [1, 2, 5, 7, 9]
+Ex 2. Tri a bulles : combien de passages ?
+--- Ex 2 : [1, 2, 3, 5, 4]
+  passage 1 : [1, 2, 3, 4, 5]
+  passage 2 : [1, 2, 3, 4, 5]
+  resultat  : [1, 2, 3, 4, 5]
+Ex 3. Trier les eleves par note, a note egale garder l'ordre alphabetique :
+  par nom  : [('Adam', 11), ('Hugo', 11), ('Ines', 14), ('Lea', 14), ('Sami', 17)]
+  par note : [('Sami', 17), ('Ines', 14), ('Lea', 14), ('Adam', 11), ('Hugo', 11)]
+Ex 4. Recherche dichotomique dans 1 000 000 de nombres tries : combien de tours au pire ?
+  au pire 20 tours sur les 1 000 000 recherches (2^20 = 1048576)
+Ex 5. Tri rapide naif sur une liste deja triee de 2 000 elements :
+  RecursionError: maximum recursion depth exceeded

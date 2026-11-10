@@ -1,0 +1,31 @@
+test_bulles_avec_range_n_sort_de_la_liste (test_tris.TestErreursDesExercices.test_bulles_avec_range_n_sort_de_la_liste)
+for i in range(n) : t[i + 1] depasse la fin de la liste -> IndexError. ... ok
+test_dichotomie_avec_bas_egal_milieu_ne_s_arrete_pas (test_tris.TestErreursDesExercices.test_dichotomie_avec_bas_egal_milieu_ne_s_arrete_pas)
+bas = milieu : trouve 11 et 3, mais tourne sans fin sur le dernier element (18), sur un absent ... ok
+test_pivot_au_hasard_seul_plante_sur_des_doublons (test_tris.TestErreursDesExercices.test_pivot_au_hasard_seul_plante_sur_des_doublons)
+Pivot au hasard mais partition classique : 2 000 valeurs identiques -> RecursionError. ... ok
+test_liste_vide (test_tris.TestRechercheDichotomique.test_liste_vide)
+Dans une liste vide, rien n'est trouve. ... ok
+test_trouve_chaque_element_et_rejette_les_absents (test_tris.TestRechercheDichotomique.test_trouve_chaque_element_et_rejette_les_absents)
+Iteratif et recursif : chaque element est trouve a son indice, les absents donnent -1. ... ok
+test_bulles_s_arrete_quand_aucun_echange (test_tris.TestTris.test_bulles_s_arrete_quand_aucun_echange)
+Sur une liste presque triee, le tri a bulles s'arrete apres 2 passages. ... ok
+test_chaque_tri_donne_le_meme_resultat_que_sorted (test_tris.TestTris.test_chaque_tri_donne_le_meme_resultat_que_sorted)
+Sur 200 listes aleatoires (vides, doublons, negatifs), chaque tri donne sorted(). ... ok
+test_fusion_stable_a_egalite_prend_a_gauche (test_tris.TestTris.test_fusion_stable_a_egalite_prend_a_gauche)
+A egalite, fusionner prend d'abord l'element de gauche (tri stable). ... ok
+test_insertion_etapes_de_l_exercice (test_tris.TestTris.test_insertion_etapes_de_l_exercice)
+Les etapes de l'exercice 1, telles qu'elles se font a la main. ... ok
+test_tri_fusion_ne_modifie_pas_la_liste_de_depart (test_tris.TestTris.test_tri_fusion_ne_modifie_pas_la_liste_de_depart)
+Le tri fusion renvoie une nouvelle liste. ... ok
+test_tri_rapide_corrige_passe_sur_des_doublons (test_tris.TestTris.test_tri_rapide_corrige_passe_sur_des_doublons)
+Pivot au hasard + partition en trois : 2 000 valeurs identiques et 20 000 notes sur vingt passent. ... ok
+test_tri_rapide_naif_plante_sur_une_liste_deja_triee (test_tris.TestTris.test_tri_rapide_naif_plante_sur_une_liste_deja_triee)
+Le piege : pivot = dernier element, liste deja triee de 2 000 elements -> RecursionError. ... ok
+test_tri_rapide_pivot_au_hasard_passe_sur_une_liste_deja_triee (test_tris.TestTris.test_tri_rapide_pivot_au_hasard_passe_sur_une_liste_deja_triee)
+Avec un pivot tire au hasard, la meme liste se trie sans erreur. ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.492s
+
+OK
