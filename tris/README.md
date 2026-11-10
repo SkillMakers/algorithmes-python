@@ -1,5 +1,7 @@
 # Algorithmes de tri en Python : cours et exercices corrigés
 
+Vidéo : https://youtu.be/Uk9Py1uXrfA
+
 Les cinq tris du programme (bulles, sélection, insertion, fusion, rapide) et la recherche dichotomique, sur la même
 liste de notes `[14, 7, 18, 3, 11, 9]`, avec sept exercices corrigés.
 
