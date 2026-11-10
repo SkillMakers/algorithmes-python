@@ -7,4 +7,4 @@ Python pur, sans aucune bibliothèque à installer. Tout est exécuté, et les s
 
 | Dossier | Vidéo |
 |---|---|
-| [`tris/`](tris/) | Algorithmes de tri en Python : cours et exercices corrigés (vidéo à venir) |
+| [`tris/`](tris/) | [Algorithmes de tri en Python : cours et exercices corrigés](https://youtu.be/Uk9Py1uXrfA) |
