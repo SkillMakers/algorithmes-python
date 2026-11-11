@@ -1,6 +1,6 @@
 # Complexité algorithmique en Python : cours et exercices corrigés
 
-Vidéo : https://www.youtube.com/@ItSkillsMaker (lien direct ajouté à la publication)
+Vidéo : https://youtu.be/7tY4PK9ceSc
 
 La complexité calculée sur le code, comptée par le programme, puis vérifiée au chronomètre avec le test du
 doublement. Sept exercices corrigés, dont un « trouver l'erreur ».
