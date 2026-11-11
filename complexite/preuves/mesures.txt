@@ -1,0 +1,18 @@
+Python 3.15.1 · Windows 11 · Intel64 Family 6 Model 142 Stepping 10, GenuineIntel
+Meilleur de 3 series d'au moins 0,2 s, graine 42. Entre parentheses : le temps divise par celui de la taille d'avant.
+
+Doublons, n nombres tous differents
+a_un_doublon_naif           2 500 :    542.3 ms         |     5 000 :     1.78 s   (x3.3) |    10 000 :     8.55 s   (x4.8) |    20 000 :    31.97 s   (x3.7)
+a_un_doublon_tri            2 500 :      1.1 ms         |     5 000 :      2.2 ms  (x2.1) |    10 000 :      4.1 ms  (x1.9) |    20 000 :      8.8 ms  (x2.1)
+a_un_doublon_ensemble       2 500 :      473 µs         |     5 000 :      2.0 ms  (x4.3) |    10 000 :      3.0 ms  (x1.5) |    20 000 :      6.6 ms  (x2.2)
+a_un_doublon_tri          250 000 :    189.1 ms         |   500 000 :    406.4 ms  (x2.1) | 1 000 000 :    941.1 ms  (x2.3) | 2 000 000 :     2.64 s   (x2.8)
+a_un_doublon_ensemble     250 000 :    109.7 ms         |   500 000 :    197.9 ms  (x1.8) | 1 000 000 :    380.1 ms  (x1.9) | 2 000 000 :    806.1 ms  (x2.1)
+
+Le piege : une seule boucle visible
+dedoublonner_lent          10 000 :     1.28 s          |    20 000 :     5.95 s   (x4.6) |    40 000 :    29.88 s   (x5.0) |    80 000 :   113.55 s   (x3.8)
+dedoublonner_rapide        10 000 :      2.3 ms         |    20 000 :      6.9 ms  (x3.0) |    40 000 :     11.7 ms  (x1.7) |    80 000 :     38.1 ms  (x3.3)
+vider_avec_pop0            50 000 :    458.7 ms         |   100 000 :     2.50 s   (x5.4) |   200 000 :     9.91 s   (x4.0) |   400 000 :    88.28 s   (x8.9)
+vider_avec_deque           50 000 :      8.1 ms         |   100 000 :     16.6 ms  (x2.0) |   200 000 :     41.4 ms  (x2.5) |   400 000 :     62.9 ms  (x1.5)
+
+Fibonacci recursif naif (exponentiel) : n augmente de 5 a chaque colonne (theorie : x11)
+fib_naif                fib(20) :      5.1 ms         | fib(25) :     79.7 ms (x15.6) | fib(30) :    510.5 ms  (x6.4) | fib(35) :     5.62 s  (x11.0)
