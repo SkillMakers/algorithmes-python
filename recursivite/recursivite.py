@@ -123,7 +123,8 @@ def puissance_double_appel(x, n, compteur=None):
     compter(compteur)
     if n == 0:
         return 1
-    carre = puissance_double_appel(x, n // 2, compteur) * puissance_double_appel(x, n // 2, compteur)
+    carre = (puissance_double_appel(x, n // 2, compteur)
+             * puissance_double_appel(x, n // 2, compteur))
     return carre if n % 2 == 0 else carre * x
 
 

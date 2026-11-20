@@ -1,6 +1,6 @@
 # Récursivité en Python : cours et exercices corrigés
 
-Vidéo : à venir (playlist [Python](https://www.youtube.com/playlist?list=PLe6-9MbhEih4iKO3s9BT_tp4VyfGJvDiB))
+Vidéo : https://youtu.be/H3YqGaEbOZw (playlist [Python](https://www.youtube.com/playlist?list=PLe6-9MbhEih4iKO3s9BT_tp4VyfGJvDiB))
 
 Chaque appel est compté par le programme, la pile d'appels est poussée jusqu'à sa limite, et les deux erreurs
 silencieuses de la vidéo sont exécutées. Sept exercices corrigés.
