@@ -1,0 +1,48 @@
+test_aplatir (test_recursivite.TestAplatir.test_aplatir) ... ok
+test_corrige_independant_d_un_appel_a_l_autre (test_recursivite.TestAplatir.test_corrige_independant_d_un_appel_a_l_autre) ... ok
+test_piege_argument_par_defaut_accumule (test_recursivite.TestAplatir.test_piege_argument_par_defaut_accumule)
+Le 1er appel est juste, les suivants repartent de la liste du precedent. ... ok
+test_factorielle_egale_math_factorial_et_fait_n_plus_1_appels (test_recursivite.TestFactorielle.test_factorielle_egale_math_factorial_et_fait_n_plus_1_appels)
+factorielle(n) = n!, avec n + 1 appels (de n jusqu'au cas de base 0). ... ok
+test_trace_descend_puis_remonte (test_recursivite.TestFactorielle.test_trace_descend_puis_remonte)
+La trace de factorielle(4) : 5 appels qui descendent, puis 5 retours qui remontent. ... ok
+test_autres_noms_de_piquets (test_recursivite.TestHanoi.test_autres_noms_de_piquets) ... ok
+test_deux_puissance_n_moins_un_deplacements_valides (test_recursivite.TestHanoi.test_deux_puissance_n_moins_un_deplacements_valides)
+2^n - 1 deplacements, et la regle respectee a chaque deplacement (rejoue). ... ok
+test_soixante_quatre_disques (test_recursivite.TestHanoi.test_soixante_quatre_disques)
+18 446 744 073 709 551 615 deplacements, environ 585 milliards d'annees a un par seconde. ... ok
+test_trois_disques (test_recursivite.TestHanoi.test_trois_disques) ... ok
+test_validateur_refuse_un_grand_disque_sur_un_petit (test_recursivite.TestHanoi.test_validateur_refuse_un_grand_disque_sur_un_petit) ... ok
+test_palindrome (test_recursivite.TestPalindrome.test_palindrome) ... ok
+test_sans_return_renvoie_none_sans_erreur (test_recursivite.TestPalindrome.test_sans_return_renvoie_none_sans_erreur)
+Juste sur 1 lettre et sur un faux palindrome, None (donc faux) sur radar et kayak. ... ok
+test_limite_et_recursion_error (test_recursivite.TestPile.test_limite_et_recursion_error)
+Limite 1 000 : factorielle(1000) leve RecursionError, la boucle non. ... ok
+test_profondeur_maximale_suit_une_limite_relevee (test_recursivite.TestPile.test_profondeur_maximale_suit_une_limite_relevee)
+Limite relevee a 5 000 : la recherche ne plafonne plus a une valeur ecrite en dur. ... ok
+test_profondeur_maximale_un_peu_sous_la_limite (test_recursivite.TestPile.test_profondeur_maximale_un_peu_sous_la_limite)
+Les appels deja en cours (le test lui-meme) comptent : on descend un peu moins de 1 000 fois. ... ok
+test_recursion_terminale_bute_sur_la_meme_limite (test_recursivite.TestPile.test_recursion_terminale_bute_sur_la_meme_limite)
+Python ne transforme pas la recursion terminale en boucle. ... ok
+test_double_appel_juste_mais_lineaire (test_recursivite.TestPuissance.test_double_appel_juste_mais_lineaire)
+L'appel sur n // 2 ecrit deux fois : 31, 255, 2 047 appels pour 10, 100, 900. ... ok
+test_n_negatif_ou_decimal_refuse_avec_un_message_clair (test_recursivite.TestPuissance.test_n_negatif_ou_decimal_refuse_avec_un_message_clair)
+Sans cette verification, n ne toucherait jamais le cas de base 0 : erreur de recursion. ... ok
+test_puissance_rapide_juste_et_logarithmique (test_recursivite.TestPuissance.test_puissance_rapide_juste_et_logarithmique)
+Memes resultats ; n + 1 appels contre bit_length(n) + 1 (5, 8, 11 pour 10, 100, 900). ... ok
+test_tranche_copie_n_n_moins_1_sur_2_elements (test_recursivite.TestSomme.test_tranche_copie_n_n_moins_1_sur_2_elements)
+t[1:] a chaque appel : (n-1) + (n-2) + ... + 0 = n(n-1)/2 elements copies, 404 550 pour 900. ... ok
+test_trois_versions_meme_resultat (test_recursivite.TestSomme.test_trois_versions_meme_resultat)
+somme, somme_tranche et la boucle donnent 62 sur les six notes. ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 0.648s
+
+OK
+
+=== Python 3.11
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.844s
+
+OK

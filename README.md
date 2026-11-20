@@ -9,3 +9,4 @@ Python pur, sans aucune bibliothèque à installer. Tout est exécuté, et les s
 |---|---|
 | [`tris/`](tris/) | [Algorithmes de tri en Python : cours et exercices corrigés](https://youtu.be/Uk9Py1uXrfA) |
 | [`complexite/`](complexite/) | [Complexité algorithmique : cours et exercices corrigés (grand O)](https://youtu.be/7tY4PK9ceSc) |
+| [`recursivite/`](recursivite/) | Récursivité en Python : cours et exercices corrigés (vidéo à venir) |

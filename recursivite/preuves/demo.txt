@@ -1,0 +1,79 @@
+Python 3.15.1
+
+--- Ex 1 : factorielle(4), la descente puis la remontee
+factorielle(4) = 24
+factorielle(4) appelee
+  factorielle(3) appelee
+    factorielle(2) appelee
+      factorielle(1) appelee
+        factorielle(0) appelee
+        factorielle(0) renvoie 1
+      factorielle(1) renvoie 1
+    factorielle(2) renvoie 2
+  factorielle(3) renvoie 6
+factorielle(4) renvoie 24
+factorielle( 4) =                         24    5 appels
+factorielle(10) =                  3 628 800   11 appels
+factorielle(20) =  2 432 902 008 176 640 000   21 appels
+factorielle(20) recursive == boucle : True
+
+--- La pile d'appels : jusqu'ou descendre ?
+sys.getrecursionlimit() = 1000
+descendre(n) passe jusqu'a n = 996
+factorielle(1000) -> RecursionError: maximum recursion depth exceeded
+factorielle_boucle(1000) a 2568 chiffres
+
+--- Ex 2 : somme d'une liste
+somme([14, 7, 18, 3, 11, 9]) = 62   7 appels
+somme_tranche([14, 7, 18, 3, 11, 9]) = 62   15 elements copies
+n =  10 : somme_tranche copie      45 elements   n(n-1)/2 =      45
+n = 100 : somme_tranche copie   4 950 elements   n(n-1)/2 =   4 950
+n = 900 : somme_tranche copie 404 550 elements   n(n-1)/2 = 404 550
+somme(900 nombres) = 404 550
+somme_terminale(900 nombres) = 404 550
+somme(1 000 nombres) -> RecursionError: maximum recursion depth exceeded
+somme_terminale(1 000 nombres) -> RecursionError: maximum recursion depth exceeded
+
+--- Ex 3 : 2 puissance n, nombre d'appels
+n =  10 : puissance  11 appels   puissance_rapide  5 appels   memes resultats : True
+n = 100 : puissance 101 appels   puissance_rapide  8 appels   memes resultats : True
+n = 900 : puissance 901 appels   puissance_rapide 11 appels   memes resultats : True
+n = 1 000 000 : puissance_rapide 21 appels   puissance -> RecursionError: maximum recursion depth exceeded
+l'appel sur n // 2 ecrit deux fois :
+n =  10 : puissance_double_appel    31 appels   resultat juste : True
+n = 100 : puissance_double_appel   255 appels   resultat juste : True
+n = 900 : puissance_double_appel 2 047 appels   resultat juste : True
+
+--- Ex 4 : palindrome, et la copie sans return
+'a'       : est_palindrome -> True    sans return -> True 
+'ab'      : est_palindrome -> False   sans return -> False
+'radar'   : est_palindrome -> True    sans return -> None 
+'kayak'   : est_palindrome -> True    sans return -> None 
+'python'  : est_palindrome -> False   sans return -> False
+'abca'    : est_palindrome -> False   sans return -> None 
+
+--- Ex 5 : tours de Hanoi
+disque 1 : A -> C
+disque 2 : A -> B
+disque 1 : C -> B
+disque 3 : A -> C
+disque 1 : B -> A
+disque 2 : B -> C
+disque 1 : A -> C
+n =  3 :         7 deplacements   2^n - 1 =         7   regle respectee : True
+n = 10 :     1 023 deplacements   2^n - 1 =     1 023   regle respectee : True
+n = 20 : 1 048 575 deplacements   2^n - 1 = 1 048 575   regle respectee : True
+n = 64 : 18 446 744 073 709 551 615 deplacements
+a un deplacement par seconde : 585 milliards d'annees
+
+--- Ex 6 : aplatir une liste imbriquee
+aplatir([1, [2, [3, 4]], 5, [[[6]]]]) = [1, 2, 3, 4, 5, 6]   6 appels, profondeur 4
+
+--- Ex 7 : le piege de l'argument par defaut
+aplatir_piege([1, [2]])   = [1, 2]
+aplatir_piege([3, [4]])   = [1, 2, 3, 4]
+aplatir_piege([5])        = [1, 2, 3, 4, 5]
+aplatir_corrige([1, [2]]) = [1, 2]
+aplatir_corrige([3, [4]]) = [3, 4]
+aplatir_corrige([5])      = [5]
+valeur par defaut stockee : aplatir_piege.__defaults__ = ([1, 2, 3, 4, 5],)

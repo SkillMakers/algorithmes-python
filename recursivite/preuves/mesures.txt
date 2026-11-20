@@ -1,0 +1,18 @@
+Python 3.15.1 · Windows 11 · AMD64
+meilleur de 3 series d'au moins 0,2 s
+
+--- Somme de 900 nombres (sous la limite de 1 000 appels)
+somme recursive (indice)           294.6 µs
+somme recursive t[1:]             3525.9 µs
+somme avec une boucle               22.4 µs
+sum(t), la fonction de Python        5.1 µs
+
+--- Factorielle de 900
+factorielle recursive              635.9 µs
+factorielle avec une boucle        250.2 µs
+
+--- Relever la limite : sys.setrecursionlimit(limite), puis descendre(n)
+limite      1 000  n =     2 000 : code de sortie 0 · RecursionError: maximum recursion depth exceeded
+limite    100 000  n =    50 000 : code de sortie 0 · 50000
+limite  1 000 000  n =   500 000 : code de sortie 0 · 500000
+limite 10 000 000  n = 5 000 000 : code de sortie 0 · 5000000
